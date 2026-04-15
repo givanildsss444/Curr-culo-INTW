@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #0f172a;
+    color: white;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.home img {
+    width: 250px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.info {
+    max-width: 500px;
+}
+
+/* SEÇÕES */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+}
+
+/* HABILIDADES */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: #0f172a;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #2563eb;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+    margin-top: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home img {
+        width: 200px;
+        height: 260px;
+    }
+}
