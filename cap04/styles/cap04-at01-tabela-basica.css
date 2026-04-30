@@ -19,6 +19,7 @@ section {
     padding: 25px;
     background: rgb(243, 245, 255);
     border-radius: 12px;
+    text-align: center;
 }
 
 table{
@@ -51,4 +52,12 @@ a {
 
 a:hover {
     color: #2563eb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+    margin-top: 20px;
 }
