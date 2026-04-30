@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #0f172a;
+    color: rgb(255, 255, 255);
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: rgb(243, 245, 255);
+    border-radius: 12px;
+}
+
+table{
+    height: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgb(138, 138, 138);
+}
+
+tr:nth-child(even){
+    background-color: rgb(213, 222, 255);
+}
+
+.time{
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #2563eb;
+}
