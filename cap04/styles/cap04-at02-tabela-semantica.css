@@ -14,12 +14,35 @@ header {
 }
 
 section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 900px;
     margin: 20px auto;
     padding: 25px;
     background: rgb(243, 245, 255);
     border-radius: 12px;
     text-align: center;
+}
+
+table{
+    height: 100%;
+    border-collapse: collapse;
+}
+
+caption{
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+th, td{
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgb(138, 138, 138);
+}
+
+tr:nth-child(even){
+    background-color: rgb(213, 222, 255);
 }
 
 a {
