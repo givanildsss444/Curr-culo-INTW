@@ -28,6 +28,42 @@ section {
     border-radius: 12px;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 5rem;
+    gap: 1rem;
+    text-align: left;
+}
+
+input{
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f1f5f9;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+button{
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
 a {
     text-decoration: none;
     color: #0f172a;
