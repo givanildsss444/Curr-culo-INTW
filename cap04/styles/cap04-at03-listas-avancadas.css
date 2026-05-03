@@ -36,6 +36,13 @@ section div{
     border-radius: 1rem;
 }
 
+dl div{
+    background-color: rgb(167, 212, 251);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
 li{
     margin: 0.5rem 3rem;
 }
