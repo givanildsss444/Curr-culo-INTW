@@ -18,35 +18,26 @@ header {
 }
 
 section {
+    
+    align-items: center;
+    justify-content: center;
     max-width: 900px;
     margin: 20px auto;
     padding: 25px;
     background: white;
     border-radius: 12px;
-    text-align: center;
+    
 }
 
-table{
-    height: 100%;
-    border-collapse: collapse;
+section div{
+    background-color: aliceblue;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
 }
 
-th, td{
-    text-align: center;
-    padding: 1rem;
-    border: 1px solid rgb(138, 138, 138);
-}
-
-tr:nth-child(even){
-    background-color: rgb(213, 222, 255);
-}
-
-tr:nth-child(odd){
-    background-color: rgb(236, 240, 255);
-}
-
-.time{
-    white-space: nowrap;
+li{
+    margin: 0.5rem 3rem;
 }
 
 a {

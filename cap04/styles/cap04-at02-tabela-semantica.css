@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body{
+    background: #f1f5f9;
+}
+
 /* HEADER */
 header {
     text-align: center;
@@ -20,7 +24,7 @@ section {
     max-width: 900px;
     margin: 20px auto;
     padding: 25px;
-    background: rgb(243, 245, 255);
+    background: white;
     border-radius: 12px;
     text-align: center;
 }
@@ -43,6 +47,10 @@ th, td{
 
 tr:nth-child(even){
     background-color: rgb(213, 222, 255);
+}
+
+tr:nth-child(odd){
+    background-color: rgb(236, 240, 255);
 }
 
 a {
