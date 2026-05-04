@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/at03.css">
+    <title>Formulário de Matrícula Acadêmica</title>
+</head>
+<body>
+
+    <header>
+        <h1>Formulário de Matrícula Acadêmica</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <form action="https://httpbin.org/post" method="post">
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    
+                    <div>
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" minlength="5" maxlength="100">
+                    </div>
+
+                    <div>
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="CPF no formato 000.000.000-00">
+                    </div>
+
+                    <div>
+                        <label for="nome">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(82) 99999-9999">
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados Acadêmicos</legend>
+
+                    <div>
+                        <label for="curso">Curso</label>
+                        <select name="curso" id="curso">
+                            <option value="">Selecione um curso</option>
+                            <optgroup label="Computaçao">
+                                <option value="si">Sistemas de Informação</option>
+                                <option value="cc">Ciência da Computaçao</option>
+                                <option value="ec">Engenharia da Computaçao</option>
+                            </optgroup>
+                            <optgroup label="Licenciatura">
+                                <option value="lm">Licenciatura em Matemática</option>
+                                <option value="lf">Licenciatura em Física</option>
+                                <option value="ll">Licenciatura em Letras</option>
+                            </optgroup>
+                            <optgroup label="Gestão">
+                                <option value="adm">Administração</option>
+                                <option value="cie">Ciências Contábeis</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend>Turno</legend>
+
+                        <div>
+                            <div>
+                                <input type="radio" name="periodo" id="manha" value="manha" required>
+                                <label for="manha">Manhã</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="periodo" id="tarde" value="tarde" required>
+                                <label for="tarde">Tarde</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="periodo" id="noite" value="noite" required>
+                                <label for="noite">Noite</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                
+                    <div>
+                        <label for="ano_ingresso">Ano de Ingresso Pretendido</label>
+                        <input type="number" name="ano_ingresso" min="2025" max="2030" required>
+                    </div>
+                
+                </fieldset>
+
+                <fieldset>
+                    <legend>Áreas de Interesse</legend>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="interesses[]" id="web" value="web">
+                            <label for="web" class="inline-label">Desenvolvimento Web</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interesses[]" id="bd" value="bd">
+                            <label for="bd" class="inline-label">Banco de Dados</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interesses[]" id="ia" value="ia">
+                            <label for="ia" class="inline-label">Inteligência Artificial</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interesses[]" id="seg" value="seguranca">
+                            <label for="seg" class="inline-label">Segurança da Informação</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interesses[]" id="infra" value="infra">
+                            <label for="infra" class="inline-label">Infraestrutura</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Solicitar matrícula</button>
+                <button type="reset">Limpar formulário</button>
+
+            </form>
+        </section>
+
+        <section>
+            <a href="../index.html">← Voltar à página principal</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Desenvolvido por Givanildo</p>
+    </footer>
+    
+</body>
+</html>
