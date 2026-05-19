@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="at05-style.css">
+    <title>Mini Design System — IFAL</title>
+</head>
+<body>
+
+    <!-- Componente 1: Hero com gradiente e imagem de fundo -->
+    <section class="hero">
+        <h1 class="hero__titulo">Aura UI</h1>
+        <p class="hero__subtitulo">Um mini design system moderno, fluido e acessível construído com metodologia BEM.</p>
+        <a href="#componentes" class="hero__cta btn btn--primario">Explorar Componentes</a>
+    </section>
+
+    <header class="header-sistema">
+        <h1>Documentação do Sistema</h1>
+    </header>
+
+    <main class="container" id="componentes">
+
+        <!-- Componente 2: Botões com modificadores -->
+        <section class="secao-demonstracao">
+            <h2>Componente 2 — Botões</h2>
+            <div class="flex-grupo">
+                <button class="btn btn--primario">Ação principal</button>
+                <button class="btn btn--secundario">Ação secundária</button>
+                <button class="btn btn--perigo">Ação destrutiva</button>
+                <button class="btn btn--primario" disabled>Desabilitado</button>
+            </div>
+        </section>
+
+        <!-- Componente 3: Cartão com elemento posicionado -->
+        <section class="secao-demonstracao">
+            <h2>Componente 3 — Cartão Retangular</h2>
+            <article class="card">
+                <span class="card__badge">Destaque</span>
+                <div class="card__imagem"></div>
+                <div class="card__corpo">
+                    <h3 class="card__titulo">Título do card</h3>
+                    <p class="card__texto">Demonstração prática de um componente Card utilizando posicionamento absoluto para a badge informativa.</p>
+                    <a class="card__link" href="#">Saiba mais →</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Componente 4: Tabela de tokens de cor -->
+        <section class="secao-demonstracao">
+            <h2>Componente 4 — Tabela de Cores</h2>
+            <table class="tabela-tokens">
+                <thead>
+                    <tr>
+                        <th>Visualização</th>
+                        <th>Token Semântico</th>
+                        <th>Valor Hexadecimal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="bloco-cor" style="background-color: #2563eb;"></div></td>
+                        <td><code>--cor-primaria</code></td>
+                        <td>#2563eb</td>
+                    </tr>
+                    <tr>
+                        <td><div class="bloco-cor" style="background-color: #0f172a;"></div></td>
+                        <td><code>--cor-secundaria</code></td>
+                        <td>#0f172a</td>
+                    </tr>
+                    <tr>
+                        <td><div class="bloco-cor" style="background-color: #f59e0b;"></div></td>
+                        <td><code>--cor-destaque</code></td>
+                        <td>#f59e0b</td>
+                    </tr>
+                    <tr>
+                        <td><div class="bloco-cor" style="background-color: #16a34a;"></div></td>
+                        <td><code>--cor-sucesso</code></td>
+                        <td>#16a34a</td>
+                    </tr>
+                    <tr>
+                        <td><div class="bloco-cor" style="background-color: #dc2626;"></div></td>
+                        <td><code>--cor-erro</code></td>
+                        <td>#dc2626</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Componente 5: Formulário estilizado -->
+        <section class="secao-demonstracao">
+            <h2>Componente 5 — Formulário</h2>
+            <form class="form" onsubmit="event.preventDefault();">
+                <div class="form__grupo">
+                    <label class="form__label" for="nome">Nome Completo *</label>
+                    <input class="form__input" type="text" id="nome" name="nome" required minlength="5" placeholder="Digite seu nome completo">
+                    <span class="form__mensagem-erro">O nome deve conter pelo menos 5 caracteres.</span>
+                </div>
+
+                <div class="form__grupo">
+                    <label class="form__label" for="email">E-mail Institucional *</label>
+                    <input class="form__input" type="email" id="email" name="email" required placeholder="exemplo@ifal.edu.br">
+                    <span class="form__mensagem-erro">Insira um endereço de e-mail válido.</span>
+                </div>
+
+                <div class="form__grupo">
+                    <label class="form__label" for="site">Website (Opcional)</label>
+                    <input class="form__input" type="url" id="site" name="site" placeholder="https://seusite.com">
+                </div>
+
+                <div class="form__grupo">
+                    <label class="form__label" for="msg">Mensagem *</label>
+                    <textarea class="form__input" id="msg" name="msg" required rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    <span class="form__mensagem-erro">Este campo é de preenchimento obrigatório.</span>
+                </div>
+
+                <button type="submit" class="form__botao btn btn--primario">Enviar Dados</button>
+            </form>
+        </section>
+
+        <!-- Link de Retorno Base -->
+        <section class="secao-demonstracao">
+            <a class="link-retorno" href="../index.html">← Voltar à página principal</a>
+        </section>
+
+    </main>
+
+    <footer class="footer-sistema">
+        <p>© 2026 - Desenvolvido por Givanildo</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,304 @@
+@import url('at05-reset.css');
+@import url('at05-variables.css');
+
+/* ── Estilos Globais da Documentação ── */
+body {
+    font-family: var(--fonte-base);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: var(--largura-max);
+    margin: 0 auto;
+    padding: var(--espaco-lg);
+}
+
+.header-sistema {
+    text-align: center;
+    padding: var(--espaco-xl) var(--espaco-lg);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+}
+
+.secao-demonstracao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-fundo-alt);
+    padding: var(--espaco-lg);
+    margin-bottom: var(--espaco-lg);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+}
+
+.secao-demonstracao h2 {
+    font-size: var(--texto-h2);
+    margin-bottom: var(--espaco-md);
+    color: var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-fundo);
+    padding-bottom: var(--espaco-sm);
+}
+
+.flex-grupo {
+    display: flex;
+    gap: var(--espaco-md);
+    flex-wrap: wrap;
+}
+
+/* ── Componente 1 — Hero com gradiente e imagem ── */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--espaco-lg);
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(37, 99, 235, 0.7)), url('https://picsum.photos');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--cor-texto-claro);
+}
+
+.hero__titulo {
+    font-size: var(--texto-display);
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    margin-bottom: var(--espaco-sm);
+}
+
+.hero__subtitulo {
+    font-size: var(--texto-h2);
+    max-width: 600px;
+    margin-bottom: var(--espaco-lg);
+    font-weight: 300;
+}
+
+.hero__cta {
+    text-decoration: none;
+}
+
+/* ── Componente 2 — Botões com modificadores ── */
+.btn {
+    display: inline-block;
+    padding: var(--espaco-sm) var(--espaco-md);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--raio-md);
+    cursor: pointer;
+    transition: var(--transicao);
+    text-align: center;
+}
+
+.btn--primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+.btn--primario:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.btn--secundario {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+}
+
+.btn--secundario:hover:not(:disabled) {
+    background-color: #1e293b;
+}
+
+.btn--perigo {
+    background-color: var(--cor-erro);
+    color: var(--cor-texto-claro);
+}
+
+.btn--perigo:hover:not(:disabled) {
+    background-color: #b91c1c;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    background-color: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ── Componente 3 — Cartão com elemento posicionado ── */
+.card {
+    position: relative;
+    max-width: 350px;
+    background-color: var(--cor-fundo-alt);
+    border-radius: var(--raio-md);
+    overflow: hidden;
+    box-shadow: var(--sombra-md);
+}
+
+.card__badge {
+    position: absolute;
+    top: var(--espaco-sm);
+    right: var(--espaco-sm);
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+    padding: var(--espaco-xs) var(--espaco-sm);
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    border-radius: var(--raio-sm);
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.card__imagem {
+    height: 180px;
+    background-color: #cbd5e1;
+    background-image: linear-gradient(45deg, #e2e8f0, #cbd5e1);
+}
+
+.card__corpo {
+    padding: var(--espaco-md);
+}
+
+.card__titulo {
+    font-size: var(--texto-h3);
+    margin-bottom: var(--espaco-sm);
+}
+
+.card__texto {
+    font-size: var(--texto-sm);
+    margin-bottom: var(--espaco-md);
+    color: #64748b;
+}
+
+.card__link {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--texto-sm);
+    transition: var(--transicao);
+}
+
+.card__link:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ── Componente 4 — Tabela de tokens de cor ── */
+.tabela-tokens {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--espaco-sm);
+}
+
+.tabela-tokens th, 
+.tabela-tokens td {
+    padding: var(--espaco-sm) var(--espaco-md);
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabela-tokens th {
+    background-color: var(--cor-fundo);
+    font-weight: 600;
+}
+
+.tabela-tokens tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.bloco-cor {
+    width: 40px;
+    height: 24px;
+    border-radius: var(--raio-sm);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ── Componente 5 — Formulário estilizado ── */
+.form {
+    width: 40rem;
+    max-width: 500px;
+}
+
+.form__grupo {
+    margin-bottom: var(--espaco-md);
+}
+
+.form__label {
+    display: block;
+    font-size: var(--texto-sm);
+    font-weight: 600;
+    margin-bottom: var(--espaco-xs);
+}
+
+.form__input {
+    width: 100%;
+    padding: var(--espaco-sm);
+    border: 1px solid #cbd5e1;
+    border-radius: var(--raio-sm);
+    transition: var(--transicao);
+}
+
+.form__input::placeholder {
+    color: #94a3b8;
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Validações dinâmicas usando pseudo-classes */
+.form__mensagem-erro {
+    display: none;
+    color: var(--cor-erro);
+    font-size: var(--texto-xs);
+    margin-top: var(--espaco-xs);
+}
+
+.form__input:invalid:not(:placeholder-shown) {
+    border-color: var(--cor-erro);
+    background-color: #fef2f2;
+}
+
+.form__input:invalid:not(:placeholder-shown) + .form__mensagem-erro {
+    display: block;
+}
+
+.form__input:valid:not(:placeholder-shown) {
+    border-color: var(--cor-sucesso);
+    background-color: #f0fdf4;
+}
+
+.form__botao {
+    margin-top: var(--espaco-sm);
+}
+
+/* Seção Voltar e Rodapé */
+.secao-voltar {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.link-retorno {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.link-retorno:hover {
+    color: var(--cor-primaria);
+}
+
+.footer-sistema {
+    text-align: center;
+    padding: var(--espaco-md);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+}
